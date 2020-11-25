@@ -1,1 +1,1 @@
-# C-c-b-i-gi-i-tin-c-a-tui-t-i-BKHN
+# Các bài giải tin của tui tại BKHN
