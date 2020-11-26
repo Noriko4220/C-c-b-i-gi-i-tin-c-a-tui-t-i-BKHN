@@ -1,0 +1,11 @@
+#include<stdio.h>
+#include<math.h>
+double x,y,z,F;
+int main() {
+	printf("x = ");scanf("%lf", &x);
+	printf("y = ");scanf("%lf", &y);
+	printf("z = ");scanf("%lf", &z);
+	F = (x+y+z)/(x*x+y*y+1)- fabs(x-z*cos(y));
+	printf("f = %lf", F);
+	return 0;
+}

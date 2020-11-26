@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<math.h>
+#include<conio.h>
+double x,y,a,b,c;
+int main() {
+	printf("x = ");scanf("%lf", &x);
+	printf("y = ");scanf("%lf", &y);
+	a = pow(x, 2)+pow(2, y);
+	b = pow((x+y), 2);
+	c = pow((x-y), 2);
+	printf("a = %lf \n", a);
+	printf("b = %lf \n", b);
+	printf("c = %lf", c);
+	return 0;
+}

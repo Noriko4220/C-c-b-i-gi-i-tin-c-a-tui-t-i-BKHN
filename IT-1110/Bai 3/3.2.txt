@@ -1,0 +1,18 @@
+#include<stdio.h>
+#include<math.h>
+#include<conio.h>
+#define pi 3.14159265
+float r;
+float S,P;
+int main() {
+	printf("r = ");scanf("%f", &r);
+	if(r>0){
+		S = pi*r*r;
+		P = 2*r*pi;
+	 printf("S = %f \n", S);
+	 printf("M = %f", P);
+	    return 0;
+	} else {
+		return 0;
+	}
+}

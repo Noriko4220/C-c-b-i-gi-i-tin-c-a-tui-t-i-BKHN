@@ -1,0 +1,11 @@
+#include<stdio.h>
+#include<math.h>
+#include<conio.h>
+int n;
+float a;
+int main() {
+	printf("n = ");scanf("%d", &n);
+	a = (float) (n+1)*(n/2);
+	printf("a = %f", a);
+	return 0;
+}

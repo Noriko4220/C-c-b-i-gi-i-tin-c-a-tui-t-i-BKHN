@@ -1,0 +1,14 @@
+#include<stdio.h>
+#include<math.h>
+#include<conio.h>
+float x,y,z,a,b,c;
+int main() {
+	printf("x = ");scanf("%f", &x);
+	printf("y = ");scanf("%f", &y);
+	printf("z = ");scanf("%f", &z);
+	a = x+y+z;
+	b = (x+y+z)/3;
+	printf("a = %f \n", a);
+	printf("b = %f \n", b);
+	return 0;
+}
