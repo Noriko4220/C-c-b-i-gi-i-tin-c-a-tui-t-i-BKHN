@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<math.h>
+#include<conio.h>
+int n;
+double a;
+int main() {
+	printf("n = ");scanf("%d", &n);
+	if(n<1000){
+		if(n>100){
+			a= floor(n/100.00) + floor((n/10.00)-floor(n/100.00)*10.00) + (n-floor(n/100.00)*100-floor((n/10.00)-floor(n/100.00)*10.00)*10.00);
+		} else if (n>10) {
+			a= floor(n/10.00) + n-floor(n/10.00)*10.00;
+		} else {
+			a= n;
+		}
+	} else {
+		return 0;
+	}
+	printf("a = %.0lf", a);
+	return 0;
+}

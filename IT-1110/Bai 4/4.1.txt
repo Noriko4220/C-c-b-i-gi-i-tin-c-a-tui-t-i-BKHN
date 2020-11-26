@@ -1,0 +1,14 @@
+#include<stdio.h>
+#include<math.h>
+#include<conio.h>
+int n;
+int a=1;
+int main() {
+	printf("n = ");scanf("%d", &n);
+	if(n<8 && n>0){
+	for (int i = 1; i<=n; i++){
+		a = a*i;
+	}
+	printf("a = %d", a);
+  }
+}

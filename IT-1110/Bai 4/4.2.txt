@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<math.h>
+#include<conio.h>
+int n;
+int main() {
+	printf("n = ");scanf("%d", &n);
+	if(n>2 && n>0){
+		for(int i=2;i<n;i++){
+			if((n%i)==0){
+			  printf("n khong la so nguyen to");
+	          return 0;	
+			}
+		}
+	}
+	printf("n la so nguyen to");
+	return 0;	
+}
