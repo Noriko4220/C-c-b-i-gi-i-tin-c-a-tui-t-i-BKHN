@@ -1,0 +1,81 @@
+/*
+#include<stdio.h>
+#include<math.h>
+#include<conio.h>
+#include <stdlib.h>
+#include <string.h>
+int n;
+int total= 0;
+double avg = 0;
+int count2= 0;
+int count3= 0;
+int count5= 0;
+char* input;
+int main() {
+    scanf("%d", &n);
+	double numberArray[n];
+	scanf("%lf", input);
+	//fgets(input, sizeof(input), stdin);
+	input =(char*)malloc(sizeof(input)*sizeof(char));
+	char bufferMemory[strlen(input)];
+	for(int count1= 0; count1< strlen(input)+ 1; count1++){
+			bufferMemory[count2] = input[count1];
+			count2= count2 + 1;
+			if(input[count1]==' '){
+				numberArray[count3] = atoi(bufferMemory);
+				memset(bufferMemory, '&', count2);
+				count2= 0;
+				count3= count3 + 1;
+			    if(count3 >= n){
+			    break;
+			}
+     	}
+	}
+	for(int count4= 0; count4 < sizeof(numberArray); count4++){
+		if(numberArray[count4] < 0){
+			avg= avg + numberArray[count4];
+			count5= count5 + 1;
+		} else {
+			total = total + numberArray[count4];
+		}
+	}
+	avg = (double) avg/count5;
+	printf("avg= %lf", avg);
+	printf("total= %d", total);
+	getch();
+} 
+(fix 1.0: chuyen tu string sang so)
+*/
+
+#include<stdio.h>
+#include<math.h>
+#include<conio.h>
+#include <stdlib.h>
+#include <string.h>
+int n;
+int total= 0;
+double avg = 0;
+int count5= 0;
+int main(){
+	printf("nhap n= ");scanf("%d", &n);
+	if(n<100){
+	double numberArray[n];
+	for(int i=1; i < n+1; i++){
+		scanf("%lf", &numberArray[i]);
+	}
+	for(int count4= 1; count4 < n+1; count4++){
+		if(numberArray[count4] < 0){
+			avg= avg + numberArray[count4];
+			count5= count5 + 1;
+		} else {
+			total = total + numberArray[count4];
+		}
+	}
+	if(avg != 0) avg = (double) avg/count5;
+	printf("avg= %lf ", avg);
+	printf("total= %d", total);
+	getch();
+    } 
+	return 0;
+}
+//(fix 1.1: su dung truc tiep buffer cua may)

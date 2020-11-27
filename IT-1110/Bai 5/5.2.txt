@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<math.h>
+#include<conio.h>
+#include <stdlib.h>
+#include <string.h>
+int n;
+int total= 0;
+int pointer;
+int interMed;
+int main()
+{
+	printf("nhap n= ");scanf("%d", &n);
+	if(n<10000){
+	int numberArray[n];
+	for(int i=1; i < n+1; i++){
+		scanf("%d", &numberArray[i]);
+	}
+	for(int k=1; k< n+1; k++){
+		if(numberArray[k] < numberArray[1]){
+			interMed= numberArray[k];
+			for(int j=1; j< k; j++){				
+				numberArray[j+1]= numberArray[j];
+			}
+			numberArray[1]= interMed; 
+		}
+	}
+	for(int p=1; p< n+1; p++){
+		printf("%d ", numberArray[p]);
+	}	
+  }
+  return 0;
+}
