@@ -10,7 +10,7 @@ int switch1= 0;
 int switch2= 0;
 int main(){
 	scanf("%d", &n);
-	char stringStorage[n][150];
+	char stringStorage[256][150];
 	for(int count1= 1; count1 <= n+1; count1++){
 	fgets(string, 150, stdin);
 	strupr(string);
