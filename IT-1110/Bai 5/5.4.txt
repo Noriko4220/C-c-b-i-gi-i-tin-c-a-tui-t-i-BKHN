@@ -37,7 +37,6 @@ int main(){
 	for(int count2= 2; count2<= n+1; count2++){
 		puts(stringStorage[count2]);printf("\n %d \n", strlen(stringStorage[count2])-1);
 	}	
-	getch();
 	return 0;
 }
 
