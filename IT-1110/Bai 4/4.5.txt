@@ -3,11 +3,12 @@
 #include<conio.h>
 double a,b,c,d,e,delta,interMed;
 int main() {
-	printf("a = ");scanf("%lf", &a);
-	printf("b = ");scanf("%lf", &b);
-	printf("c = ");scanf("%lf", &c);
+	scanf("%lf", &a);
+	scanf("%lf", &b);
+	scanf("%lf", &c);
 	if(a!= 0){
 		delta = pow(b,2)-4*a*c;
+		if(delta > 0){
 		d = (-b+sqrt(delta))/(2*a);
 		e = (-b-sqrt(delta))/(2*a);
 		if(e>d){
@@ -15,16 +16,22 @@ int main() {
 			e= d;
 			d= interMed;
 		}
-		printf("nghiem 1 = %lf \n", d);
-		printf("nghiem 2 = %lf", e);
+		printf("%f \n", d);
+		printf("%f", e);
+		} else if (delta = 0){
+			d = -b/(2*a);
+			printf("%f", d);
+		} else {
+			printf("Phuong trinh vo nghiem");
+		}
 	} else {
 		if (b!= 0){
-		printf("nghiem = %lf", -c/b);
+		printf("%f", -c/b);
 	    } else {
 	    	if (c==0){
-			printf("vo so nghiem");
+			printf("Phuong trinh vo so nghiem");
 			} else {
-		    printf("vo nghiem");}		
+		    printf("Phuong trinh vo nghiem");}		
 	}
   }
   return 0;
