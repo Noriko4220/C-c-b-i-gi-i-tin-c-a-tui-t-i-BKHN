@@ -1,26 +1,44 @@
 #include<stdio.h>
 #include<math.h>
 #include<conio.h>
+double x;
+double a= 0;
+double b= 0;
+double c= 0;
+double d= 1;
+double i= 0;
+double j= 0;
+double k= 0;
+double l= 1;
 int n;
-double a;
 int main() {
 	while(1){
 	scanf("%d", &n);
-	if(n>0 && n<1000){
+	scanf("%lf", &x);
+	if(n>0 && x>0){
 		break;
 	}
 }
-	if(n<1000){
-		if(n>100){
-			a= floor(n/100.00) + floor((n/10.00)-floor(n/100.00)*10.00) + (n-floor(n/100.00)*100-floor((n/10.00)-floor(n/100.00)*10.00)*10.00);
-		} else if (n>10) {
-			a= floor(n/10.00) + n-floor(n/10.00)*10.00;
-		} else {
-			a= n;
+	if(n>0){
+		while(i<=n){
+			a= a + pow(x,i);
+			i++;
 		}
-	} else {
-		return 0;
+		while(j<=n){
+			b= b + pow((-1),j)*pow(x,j);
+			j++;
+		}
+		while(k<=n){
+			while(l<=k){
+			  d= d*l;
+			  l++;
+		    }
+		    c= c+ (pow(x,k)/d);
+		    k++;
+		}
+		printf("%f \n", a);
+		printf("%f \n", b);
+		printf("%f \n", c);
 	}
-	printf("%.0lf", a);
-	return 0;
+  return 0;
 }
