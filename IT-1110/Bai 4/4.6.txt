@@ -6,26 +6,39 @@ double a= 0;
 double b= 0;
 double c= 0;
 double d= 1;
+double i= 0;
+double j= 0;
+double k= 0;
+double l= 1;
 int n;
 int main() {
-	printf("n = ");scanf("%d", &n);
-	printf("x = ");scanf("%lf", &x);
+	while(1){
+	scanf("%d", &n);
+	scanf("%lf", &x);
+	if(n>0 && x>0){
+		break;
+	}
+}
 	if(n>0){
-		for(double i= 0; i<n+1; i++){
+		while(i<=n){
 			a= a + pow(x,i);
+			i++;
 		}
-		for(double i= 0; i<n+1; i++){
-			b= b + pow((-1),i)*pow(x,i);
+		while(j<=n){
+			b= b + pow((-1),j)*pow(x,j);
+			j++;
 		}
-		for(double i= 0; i<n+1; i++){
-			for(double k= 1; k<i+1; k++){
-			  d= d*k;
+		while(k<=n){
+			while(l<=k){
+			  d= d*l;
+			  l++;
 		    }
-		    c= c+ (pow(x,i)/d);
+		    c= c+ (pow(x,k)/d);
+		    k++;
 		}
-		printf("a= %lf \n", a);
-		printf("b= %lf \n", b);
-		printf("c= %lf \n", c);
+		printf("%f \n", a);
+		printf("%f \n", b);
+		printf("%f \n", c);
 	}
   return 0;
 }
