@@ -2,33 +2,42 @@
 #include<math.h>
 #include<conio.h>
 int a,b,c,d,e;
+int j= 1;
 int main() {
-	printf("a = ");scanf("%d", &a);
-	printf("b = ");scanf("%d", &b);
+    while(1){
+	scanf("%d", &a);
+	scanf("%d", &b);
+	if(a>0 && b>0){
+		break;
+	}
+}
+	int i= b;
 	if(a>0 && b>0){
 		if(b>a){
 			e= b;
 			b= a;
 			a= e;
 		}
-			for(int i= b; i>0; i--){
+			while(i>0){
 				if((b%i)== 0 && (a%i)== 0)
 				{
 					c= i;
 					break;
 				}
+				i--;
 			}
-			for(int i= 1; i<(b+1); i++){
+			while(i<(b+1)){
 				if(((i*a)%b)== 0)
 				{
 					d= i*a;
 					break;
 				}
+				i++;
 			}
 	} else {
 		return 0;
 	}
-	printf("Uoc chung lon nhat = %d \n", c);
-	printf("Boi chung nho nhat = %d", d);
+	printf("%d \n", c);
+	printf("%d", d);
 	return 0;
 }
