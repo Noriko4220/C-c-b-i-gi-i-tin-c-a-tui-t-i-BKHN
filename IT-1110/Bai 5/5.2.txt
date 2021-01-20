@@ -3,30 +3,39 @@
 #include<conio.h>
 #include <stdlib.h>
 #include <string.h>
-int n;
-int total= 0;
-int pointer;
-int interMed;
-int main()
-{
-	printf("nhap n= ");scanf("%d", &n);
-	if(n<10000){
-	int numberArray[n];
-	for(int i=1; i < n+1; i++){
-		scanf("%d", &numberArray[i]);
-	}
-	for(int k=1; k< n+1; k++){
-		if(numberArray[k] < numberArray[1]){
-			interMed= numberArray[k];
-			for(int j=1; j< k; j++){				
-				numberArray[j+1]= numberArray[j];
-			}
-			numberArray[1]= interMed; 
+char string[150];
+char interMed;
+int index= 1;
+int switch1= 0;
+int switch2= 0;
+int main(){
+	fgets(string, 150, stdin);
+	char stringOut[strlen(string)+1];
+	for(int i=0; i <= strlen(string); i++){
+		if (string[0] == ' ') 
+            memmove(string, string+1, strlen(string));
+		if (string[i]==' ' && switch1== 0){
+			i--;
+			for(int k=i; k <= strlen(string); k++){
+				string[k] = string[k+1];
+				continue;
 		}
 	}
-	for(int p=1; p< n+1; p++){
-		printf("%d ", numberArray[p]);
-	}	
-  }
-  return 0;
+	switch1= 1;
+		if (string[i]==' ' && string[i+1]==' ' && switch1== 1){
+			i--;
+			for(int j=i+1; j <= strlen(string); j++){
+				string[j] = string[j+1];
+		}	
+	}
+}
+   /*string[0] = string[0] - 32;
+   for(int i=0; i <= strlen(string); i++){
+   	if(string[i-1]==' ' && 96< string[i] && string[i]< 122){
+   		string[i] = string[i]-32;
+	   }
+   }*/
+	puts(string);printf("%d", strlen(string)-1);
+	getch();
+	return 0;
 }
